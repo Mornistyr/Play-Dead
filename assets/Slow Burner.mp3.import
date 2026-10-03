@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dneteqo34yw6d"
+path="res://.godot/imported/Slow Burner.mp3-8c8e00818cf02ac87a549a2906f34fde.mp3str"
+
+[deps]
+
+source_file="res://assets/Slow Burner.mp3"
+dest_files=["res://.godot/imported/Slow Burner.mp3-8c8e00818cf02ac87a549a2906f34fde.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
