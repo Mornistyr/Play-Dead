@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b2vx6pxm3ncjj"]
+
+[ext_resource type="Script" uid="uid://b8wi12egfq1on" path="res://note_spawner.gd" id="1_0xm2m"]
+[ext_resource type="MidiResource" uid="uid://rrycndt777oc" path="res://music/Possum Melody.mid" id="1_ig7tw"]
+
+[node name="Main" type="Node2D" unique_id=486344553]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=209814955]
+offset = Vector2(160, 90)
+
+[node name="NoteSpawner" type="Node" parent="." unique_id=674432081]
+script = ExtResource("1_0xm2m")
+
+[node name="MidiPlayer" type="MidiPlayer" parent="NoteSpawner" unique_id=782759401]
+midi = ExtResource("1_ig7tw")

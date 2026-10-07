@@ -1,0 +1,14 @@
+[remap]
+
+importer="com.nlaha.godotmidi"
+type="MidiResource"
+uid="uid://rrycndt777oc"
+path="res://.godot/imported/Possum Melody.mid-e78e83708bbdfeda4bb993716fb23a83.res"
+
+[deps]
+
+source_file="res://music/Possum Melody.mid"
+dest_files=["res://.godot/imported/Possum Melody.mid-e78e83708bbdfeda4bb993716fb23a83.res"]
+
+[params]
+
