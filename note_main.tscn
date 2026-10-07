@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b2vx6pxm3ncjj"]
+
+[ext_resource type="Script" uid="uid://b8wi12egfq1on" path="res://note_spawner.gd" id="1_0xm2m"]
+[ext_resource type="MidiResource" uid="uid://rrycndt777oc" path="res://music/Possum Melody.mid" id="1_ig7tw"]
+[ext_resource type="AudioStream" uid="uid://hwldkf7pbxws" path="res://music/Possum Theme.mp3" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://lrsgge3c45qt" path="res://assets/Board.png" id="4_lquwl"]
+
+[node name="Main" type="Node2D" unique_id=486344553]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=209814955]
+offset = Vector2(160, 90)
+
+[node name="NoteSpawner" type="Node2D" parent="." unique_id=520057573]
+position = Vector2(154, 85)
+script = ExtResource("1_0xm2m")
+
+[node name="MidiPlayer" type="MidiPlayer" parent="NoteSpawner" unique_id=782759401]
+midi = ExtResource("1_ig7tw")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="NoteSpawner" unique_id=588319803]
+stream = ExtResource("4_1bvp3")
+
+[node name="BoardSprite" type="Sprite2D" parent="NoteSpawner" unique_id=1246311664]
+texture_filter = 1
+position = Vector2(-1, -2)
+texture = ExtResource("4_lquwl")
+offset = Vector2(7, 7)
