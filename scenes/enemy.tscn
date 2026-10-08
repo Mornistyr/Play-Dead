@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cpl6d4m4j71ak"]
+
+[ext_resource type="Texture2D" uid="uid://ck2ehdlgence3" path="res://assets/Sprite-Fox.png" id="1_7p1mj"]
+[ext_resource type="Script" uid="uid://bijrw16khjf50" path="res://scenes/enemy.gd" id="1_md0e3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_md0e3"]
+radius = 8.558621
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jhoyl"]
+radius = 9.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=258604895]
+script = ExtResource("1_md0e3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=143994142]
+position = Vector2(-1, -9)
+shape = SubResource("CircleShape2D_md0e3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=182446575]
+texture = ExtResource("1_7p1mj")
+offset = Vector2(0, -15)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=289205617]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=539482992]
+position = Vector2(-1, -9)
+shape = SubResource("CircleShape2D_jhoyl")

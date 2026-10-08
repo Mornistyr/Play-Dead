@@ -215,6 +215,9 @@ speed_scale = 2.0
 position = Vector2(0, 9)
 shape = SubResource("CircleShape2D_bj4t2")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=162054473]
+position = Vector2(1, 8)
+
 [node name="Area2D" type="Area2D" parent="." unique_id=531739113 groups=["Player Area"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=700731818]

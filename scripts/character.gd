@@ -1,10 +1,15 @@
 extends CharacterBody2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 var is_moving: bool
 
 const SPEED = 150.0
 const JUMP_VELOCITY = -250.0
 
+
+func _ready() -> void:
+	GameState.died.connect(_on_died)
+	animation_player.animation_finished.connect(_on_animation_finished)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -28,6 +33,7 @@ func _physics_process(delta: float) -> void:
 		is_moving =  false
 	if is_moving:
 		animated_sprite.play("walking")
+		GameState.player_position = position
 	else:
 		animated_sprite.play("Idle")
 		
@@ -35,15 +41,14 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.flip_h = true
 	if direction == 1:
 		animated_sprite.flip_h = false
-	
-	
-	
 
-		
-		
-		
-		
-		
-	
 	move_and_slide()
 	
+
+
+func _on_died():
+	animation_player.play("die")
+	
+func _on_animation_finished(anim_name):
+	if anim_name == "die":
+		queue_free()
