@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Play Dead"
-run/main_scene="uid://bb3fbpx38h4v"
+run/main_scene="uid://c7eqxw4m10cf2"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
