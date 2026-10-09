@@ -156,7 +156,7 @@ radius = 9.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_jhoyl"]
 radius = 9.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=47564355]
+[node name="Snake" type="CharacterBody2D" unique_id=47564355]
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1928364938]
 sprite_frames = SubResource("SpriteFrames_bj4t2")

@@ -9,7 +9,7 @@ radius = 8.558621
 [sub_resource type="CircleShape2D" id="CircleShape2D_jhoyl"]
 radius = 9.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=258604895]
+[node name="Fox" type="CharacterBody2D" unique_id=258604895]
 script = ExtResource("1_md0e3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=143994142]
