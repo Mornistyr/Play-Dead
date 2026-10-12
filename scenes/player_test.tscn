@@ -93,7 +93,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Idle",
-"speed": 5.0
+"speed": 30.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -119,24 +119,25 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Walking",
-"speed": 5.0
+"speed": 45.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mqvok"]
 radius = 7.0
 
-[node name="Player Test" type="CharacterBody2D" unique_id=1608866276]
+[node name="Player" type="CharacterBody2D" unique_id=1608866276]
 script = ExtResource("1_6p80c")
-speed = 1.5
+speed = 2.0
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1218719007]
 position = Vector2(2, -16)
 sprite_frames = SubResource("SpriteFrames_mqvok")
-animation = &"Idle"
+animation = &"Walking"
+frame_progress = 0.48348892
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1119542506]
+zoom = Vector2(3.89, 3.89)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=321274565]
 position = Vector2(2, -7)
 shape = SubResource("CircleShape2D_mqvok")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1119542506]
-zoom = Vector2(1.31, 1.31)
