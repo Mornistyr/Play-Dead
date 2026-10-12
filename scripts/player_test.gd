@@ -30,3 +30,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move left"):
 		sprite.play("Walking")
 		sprite.flip_h = true
+	if Input.is_action_pressed("move up"):
+		sprite.play("Walking")
+	if Input.is_action_pressed("move down"):
+		sprite.play("Walking")

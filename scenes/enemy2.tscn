@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bfbre6uxglpbx"]
 
+[ext_resource type="Script" uid="uid://bd0blv4xd5tuu" path="res://scripts/enemy_2.gd" id="1_3neu4"]
 [ext_resource type="Texture2D" uid="uid://wo6eow8gnruj" path="res://assets/Sprite-Snake Boss.png" id="2_3neu4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mhmjl"]
@@ -156,7 +157,13 @@ radius = 9.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_jhoyl"]
 radius = 9.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_bj4t2"]
+radius = 105.86
+
 [node name="Snake" type="CharacterBody2D" unique_id=47564355]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_3neu4")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1928364938]
 sprite_frames = SubResource("SpriteFrames_bj4t2")
@@ -175,3 +182,12 @@ shape = SubResource("CircleShape2D_md0e3")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=539482992]
 position = Vector2(0, -24)
 shape = SubResource("CircleShape2D_jhoyl")
+
+[node name="Sight" type="Area2D" parent="." unique_id=1935051253]
+position = Vector2(0, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sight" unique_id=1436012186]
+shape = SubResource("CircleShape2D_bj4t2")
+
+[connection signal="body_entered" from="Sight" to="." method="_on_sight_body_entered"]
+[connection signal="body_exited" from="Sight" to="." method="_on_sight_body_exited"]
