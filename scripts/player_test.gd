@@ -1,7 +1,13 @@
 extends CharacterBody2D
 @onready var sprite: AnimatedSprite2D = $Sprite2D
+var health: int = 100
 
 @export var speed = 3.5
+
+
+
+
+
 
 func _physics_process(delta):
 	if Input.is_action_pressed("move up"):
@@ -22,7 +28,8 @@ func _physics_process(delta):
 	move_and_collide(velocity)
 	
 	#animations
-	if velocity.y == 0 and velocity.x == 0:
+
+	if Input.is_anything_pressed() == false:
 		sprite.play("Idle")
 	if Input.is_action_pressed("move right"):
 		sprite.play("Walking")
@@ -34,3 +41,18 @@ func _physics_process(delta):
 		sprite.play("Walking")
 	if Input.is_action_pressed("move down"):
 		sprite.play("Walking")
+		
+	if Input.is_action_pressed("playdead"):
+		sprite.play("Dead")
+		
+#Health
+
+
+
+func _on_hitbox_body_entered(body: Node2D) -> void:
+	if body.name == "Snake": 
+		health -= 25
+		print(health)
+		
+	if health == 0:
+		print("died")
