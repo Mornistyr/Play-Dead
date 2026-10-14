@@ -22,9 +22,16 @@ func _attack(delta: float) -> void:
 func _on_sight_body_entered(body: Node2D) -> void:
 	if body.name == "Player Test":
 		target = body
-		print(target)
+		$Timer.stop()
+		print("timer stopped 2")
 
 
 func _on_sight_body_exited(body: Node2D) -> void:
 	if body.name == "Player Test":
-		target = null
+		$Timer.start()
+		print("timer started")
+
+
+func _on_timer_timeout() -> void:
+	print("timer stopped")
+	target = null

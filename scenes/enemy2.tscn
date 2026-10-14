@@ -151,11 +151,8 @@ animations = [{
 "speed": 20.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_md0e3"]
-radius = 9.0
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_jhoyl"]
-radius = 9.0
+radius = 16.27882
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bj4t2"]
 radius = 105.86
@@ -171,16 +168,8 @@ autoplay = "default"
 frame_progress = 0.11609543
 offset = Vector2(0, -15)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=143994142]
-position = Vector2(-4, -8)
-shape = SubResource("CircleShape2D_md0e3")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1050339781]
-position = Vector2(3, -8)
-shape = SubResource("CircleShape2D_md0e3")
-
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=539482992]
-position = Vector2(0, -24)
+position = Vector2(0, -15)
 shape = SubResource("CircleShape2D_jhoyl")
 
 [node name="Sight" type="Area2D" parent="." unique_id=1935051253]
@@ -189,5 +178,10 @@ position = Vector2(0, -16)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sight" unique_id=1436012186]
 shape = SubResource("CircleShape2D_bj4t2")
 
+[node name="Timer" type="Timer" parent="." unique_id=1587014178]
+wait_time = 3.847
+one_shot = true
+
 [connection signal="body_entered" from="Sight" to="." method="_on_sight_body_entered"]
 [connection signal="body_exited" from="Sight" to="." method="_on_sight_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
