@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://n14xiseptawp" path="res://assets/Sprite-tilemap2.png" id="1_qdc3n"]
 [ext_resource type="PackedScene" uid="uid://cqhy88tigtki5" path="res://scenes/player_test.tscn" id="2_owpos"]
 [ext_resource type="PackedScene" uid="uid://bfbre6uxglpbx" path="res://scenes/enemy2.tscn" id="4_f241j"]
+[ext_resource type="PackedScene" uid="uid://0ei2r7f8i1cu" path="res://scenes/tick.tscn" id="5_43ty5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f241j"]
 texture = ExtResource("1_qdc3n")
@@ -66,9 +67,8 @@ texture = ExtResource("1_qdc3n")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_f241j")
 
-[node name="Main 2" type="Node2D" unique_id=1614583982 node_paths=PackedStringArray("level_start_pos")]
+[node name="Main 2" type="Node2D" unique_id=1614583982]
 script = ExtResource("1_f241j")
-level_start_pos = NodePath("PlayerStart")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=820955429]
 tile_set = SubResource("TileSet_bj4t2")
@@ -81,5 +81,31 @@ position = Vector2(8, 0)
 [node name="Snake" parent="." unique_id=47564355 instance=ExtResource("4_f241j")]
 position = Vector2(525, -54)
 
-[node name="PlayerStart" type="Node2D" parent="." unique_id=1063855]
-position = Vector2(10, -6)
+[node name="Node" type="Node" parent="." unique_id=1596023868]
+
+[node name="Tick" parent="Node" unique_id=1941353982 instance=ExtResource("5_43ty5")]
+position = Vector2(7, -59)
+
+[node name="Tick2" parent="Node" unique_id=1020035433 instance=ExtResource("5_43ty5")]
+position = Vector2(7, -76)
+
+[node name="Tick3" parent="Node" unique_id=1360207235 instance=ExtResource("5_43ty5")]
+position = Vector2(7, -93)
+
+[node name="Tick4" parent="Node" unique_id=1061149233 instance=ExtResource("5_43ty5")]
+position = Vector2(231, -70)
+
+[node name="Tick5" parent="Node" unique_id=1879234937 instance=ExtResource("5_43ty5")]
+position = Vector2(220, -70)
+
+[node name="Tick6" parent="Node" unique_id=1498205742 instance=ExtResource("5_43ty5")]
+position = Vector2(208, -70)
+
+[node name="Tick7" parent="Node" unique_id=896744437 instance=ExtResource("5_43ty5")]
+position = Vector2(195, -70)
+
+[node name="Tick8" parent="Node" unique_id=196429866 instance=ExtResource("5_43ty5")]
+position = Vector2(181, -70)
+
+[node name="Tick9" parent="Node" unique_id=71708598 instance=ExtResource("5_43ty5")]
+position = Vector2(167, -70)
