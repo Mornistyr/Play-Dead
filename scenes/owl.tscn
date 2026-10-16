@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bxqs5uwpf2m8e"]
+
+[ext_resource type="Texture2D" uid="uid://cgwg4r7og5v8p" path="res://assets/Sprite-Owlidle.png" id="1_a0qig"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ri17u"]
+atlas = ExtResource("1_a0qig")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5aqbm"]
+atlas = ExtResource("1_a0qig")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyidr"]
+atlas = ExtResource("1_a0qig")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exhi5"]
+atlas = ExtResource("1_a0qig")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xb3yo"]
+atlas = ExtResource("1_a0qig")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuxou"]
+atlas = ExtResource("1_a0qig")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bj4t2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ri17u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5aqbm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pyidr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exhi5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xb3yo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuxou")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bj4t2"]
+radius = 15.811388
+
+[node name="Owl" type="CharacterBody2D" unique_id=235951976]
+scale = Vector2(0.535, 0.535)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=408897728]
+sprite_frames = SubResource("SpriteFrames_bj4t2")
+autoplay = "default"
+frame_progress = 0.629412
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=959851874]
+shape = SubResource("CircleShape2D_bj4t2")

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bfbre6uxglpbx"]
 
 [ext_resource type="Script" uid="uid://bd0blv4xd5tuu" path="res://scripts/enemy_2.gd" id="1_3neu4"]
-[ext_resource type="Texture2D" uid="uid://wo6eow8gnruj" path="res://assets/Sprite-Snake Boss.png" id="2_3neu4"]
+[ext_resource type="Texture2D" uid="uid://d0dsi4aejm5ej" path="res://assets/SNAKEIDLE.png" id="2_3neu4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mhmjl"]
 atlas = ExtResource("2_3neu4")
@@ -67,22 +67,6 @@ region = Rect2(896, 0, 64, 64)
 atlas = ExtResource("2_3neu4")
 region = Rect2(960, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7kcof"]
-atlas = ExtResource("2_3neu4")
-region = Rect2(1024, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wthoe"]
-atlas = ExtResource("2_3neu4")
-region = Rect2(1088, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_myxnc"]
-atlas = ExtResource("2_3neu4")
-region = Rect2(1152, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tjbyi"]
-atlas = ExtResource("2_3neu4")
-region = Rect2(1216, 0, 64, 64)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_bj4t2"]
 animations = [{
 "frames": [{
@@ -133,22 +117,10 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ux7hr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7kcof")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wthoe")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_myxnc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tjbyi")
 }],
 "loop": 1,
 "name": &"default",
-"speed": 20.0
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jhoyl"]
@@ -165,7 +137,7 @@ script = ExtResource("1_3neu4")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1928364938]
 sprite_frames = SubResource("SpriteFrames_bj4t2")
 autoplay = "default"
-frame_progress = 0.11609543
+frame_progress = 0.9887241
 offset = Vector2(0, -15)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=539482992]
