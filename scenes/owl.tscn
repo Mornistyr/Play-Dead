@@ -2,33 +2,60 @@
 
 [ext_resource type="Texture2D" uid="uid://cgwg4r7og5v8p" path="res://assets/Sprite-Owlidle.png" id="1_a0qig"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ri17u"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0qig"]
 atlas = ExtResource("1_a0qig")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5aqbm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ri17u"]
 atlas = ExtResource("1_a0qig")
 region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pyidr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5aqbm"]
 atlas = ExtResource("1_a0qig")
 region = Rect2(128, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_exhi5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyidr"]
 atlas = ExtResource("1_a0qig")
 region = Rect2(192, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xb3yo"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_exhi5"]
 atlas = ExtResource("1_a0qig")
 region = Rect2(256, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tuxou"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xb3yo"]
 atlas = ExtResource("1_a0qig")
 region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuxou"]
+atlas = ExtResource("1_a0qig")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dawt"]
+atlas = ExtResource("1_a0qig")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aw2e2"]
+atlas = ExtResource("1_a0qig")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_874fg"]
+atlas = ExtResource("1_a0qig")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6u0c"]
+atlas = ExtResource("1_a0qig")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2go7"]
+atlas = ExtResource("1_a0qig")
+region = Rect2(704, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bj4t2"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0qig")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ri17u")
 }, {
@@ -46,6 +73,21 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tuxou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7dawt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aw2e2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_874fg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6u0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2go7")
 }],
 "loop": 1,
 "name": &"default",
