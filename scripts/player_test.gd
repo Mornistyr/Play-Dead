@@ -3,10 +3,10 @@ extends CharacterBody2D
 var health: int = 100
 
 @export var speed = 3.5
-signal player_died
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 var is_alive: bool = true
-
+var is_playing_dead : bool = false
 
 
 func _physics_process(delta):
@@ -44,13 +44,17 @@ func _physics_process(delta):
 			
 		if Input.is_action_pressed("playdead"):
 			sprite.play("Dead")
+			is_playing_dead = true
+		else:
+			is_playing_dead = false
 	if is_alive == false:
 		sprite.play("Dead")
 #Health
 func _on_hitbox_body_entered(body: Node2D) -> void:
-	if body.name == "Snake": 
+	if body.name == "Snake" and !is_playing_dead: 
 		health -= 25
 		print(health)
+		animation_player.play("hit")
 		
 		
 #death
@@ -58,7 +62,7 @@ func _on_hitbox_body_entered(body: Node2D) -> void:
 		print("died")
 		is_alive = false
 		$Timer.start()
-		emit_signal("player_died")
+		GameState.died.emit()
 
 func _on_timer_timeout() -> void:
 	get_tree().reload_current_scene()
