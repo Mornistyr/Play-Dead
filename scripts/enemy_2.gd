@@ -18,7 +18,10 @@ func _physics_process(delta: float) -> void:
 func _attack(delta: float) -> void:
 	var direction = (target.position - position).normalized()
 	position += direction * SPEED * delta 
-	
+	if direction.x > 0:
+		$Sprite2D.flip_h = true
+	if direction.x < 0:
+		$Sprite2D.flip_h = false
 
 func _on_sight_body_entered(body: Node2D) -> void:
 	if body.name == "Player Test":
